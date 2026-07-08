@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Illegalcord is an open-source Discord client mod built for users who want more control, deeper plugins, stronger audio, better streaming, and honest risk awareness.">
+    <title>Illegalcord | Unlock the Modified Discord Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header" data-header>
+        <a class="brand" href="#top" aria-label="Illegalcord home">
+            <img src="Illegalcord.png" alt="Illegalcord logo">
+            <span>Illegalcord</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="#plugins">Plugins</a>
+            <a href="#compare">Compare</a>
+            <a href="#docs">Docs</a>
+            <a href="#faq">FAQ</a>
+            <a href="about.html">About</a>
+        </nav>
+        <a class="nav-cta" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-scene" aria-hidden="true">
+                <div class="signal-grid"></div>
+                <figure class="client-shot">
+                    <img src="IllegalcordUI.png" alt="Illegalcord settings interface preview">
+                </figure>
+                <img class="hero-mark" src="Illegalcord.png" alt="">
+            </div>
+
+            <div class="hero-content">
+                <p class="eyebrow">Open-source Discord client mod</p>
+                <h1 id="hero-title">Illegalcord</h1>
+                <p class="hero-copy">
+                    Built for people who already know modified Discord clients carry risk and still want the version that pushes the ceiling: stronger plugins, high-quality screen sharing, stereo voice, microphone control, privacy tools, and unapologetic user freedom.
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Join Telegram</a>
+                    <a class="button secondary" href="https://illegalcord.mintlify.site/" target="_blank" rel="noreferrer">Illegalcord Documentations</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ticker" aria-label="Illegalcord highlights">
+            <div>
+                <strong>300+</strong>
+                <span>plugin ecosystem</span>
+            </div>
+            <div>
+                <strong>Stereo</strong>
+                <span>voice experiments</span>
+            </div>
+            <div>
+                <strong>HQ</strong>
+                <span>screenshare controls</span>
+            </div>
+            <div>
+                <strong>PoC</strong>
+                <span>privacy and research tools</span>
+            </div>
+        </section>
+
+        <section class="section intro-band" aria-labelledby="intro-title">
+            <div class="section-heading">
+                <p class="eyebrow">Why it exists</p>
+                <h2 id="intro-title">A client for people who do not want the ceiling decided for them.</h2>
+            </div>
+            <div class="intro-copy">
+                <p>
+                    Vencord built a strong foundation. Equicord widened the plugin catalog. Illegalcord is what happens when that foundation is treated like a launchpad instead of a fence.
+                </p>
+                <p>
+                    Credit where it is due: Illegalcord exists because the work of Vencord, Equicord, and their communities made this direction possible. Respect for the base. No respect for artificial limits.
+                </p>
+            </div>
+        </section>
+
+        <section class="manifesto-strip" aria-label="Illegalcord manifesto">
+            <p>The debate is simple: Vencord and Equicord optimize for approval. Illegalcord optimizes for potential.</p>
+        </section>
+
+        <section class="section plugins-section" id="plugins" aria-labelledby="plugins-title">
+            <div class="section-heading centered">
+                <p class="eyebrow">Plugin stack</p>
+                <h2 id="plugins-title">Three ecosystems. One client that refuses to stop at the polite version.</h2>
+            </div>
+
+            <div class="plugin-grid">
+                <article class="plugin-column">
+                    <div class="column-kicker">Vencord plugins</div>
+                    <h3>The polished baseline</h3>
+                    <p>Stable, useful, familiar. Vencord gives the core client-mod experience, but it is intentionally conservative.</p>
+                    <ul class="plugin-list">
+                        <li>ClientTheme</li>
+                        <li>Experiments</li>
+                        <li>FakeNitro</li>
+                        <li>BetterFolders</li>
+                        <li>QuickReply</li>
+                        <li>ReviewDB</li>
+                        <li>WebScreenShareFixes</li>
+                        <li>RelationshipNotifier</li>
+                    </ul>
+                </article>
+
+                <article class="plugin-column">
+                    <div class="column-kicker">Equicord plugins</div>
+                    <h3>The bigger community layer</h3>
+                    <p>Equicord adds a wider set of third-party plugins and community experiments, but still keeps the same cautious philosophy.</p>
+                    <ul class="plugin-list">
+                        <li>BetterActivities</li>
+                        <li>MusicControls</li>
+                        <li>ThemeLibrary</li>
+                        <li>ScheduledMessages</li>
+                        <li>MessageLoggerEnhanced</li>
+                        <li>MoreStickers</li>
+                        <li>Timezones</li>
+                        <li>RichPresence</li>
+                    </ul>
+                </article>
+
+                <article class="plugin-column illegal">
+                    <div class="column-kicker">Illegalcord plugins</div>
+                    <h3>The unlocked lab</h3>
+                    <p>Illegalcord adds the tools people actually ask for when they want the full modified-client experience.</p>
+                    <ul class="plugin-list">
+                        <li>BetterMicrophone</li>
+                        <li>BetterScreenshare</li>
+                        <li>StereoInstaller</li>
+                        <li>Securecord Opossum</li>
+                        <li>WebRTCLeakPrevent</li>
+                        <li>AnonLi Drop</li>
+                        <li>CustomDNS</li>
+                        <li>Client Diagnostics</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section feature-band" aria-labelledby="features-title">
+            <div class="section-heading">
+                <p class="eyebrow">Illegalcord advantage</p>
+                <h2 id="features-title">The point is not to be safer-looking. The point is to be more capable.</h2>
+            </div>
+            <div class="feature-list">
+                <article>
+                    <span>01</span>
+                    <h3>High-quality screen sharing</h3>
+                    <p>More control over the experience people actually notice: stream quality, media behavior, and fewer artificial walls.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Microphone and stereo control</h3>
+                    <p>Voice should not feel locked behind a boring default. Illegalcord explores better mic quality and stereo output on Discord.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Privacy-first experiments</h3>
+                    <p>Securecord, WebRTC leak prevention, DNS controls, PGP workflows, and other PoCs exist to give technical users real choices.</p>
+                </article>
+                <article>
+                    <span>04</span>
+                    <h3>User-owned risk</h3>
+                    <p>Any modified Discord client can violate Discord's Terms of Service. Illegalcord says that part out loud instead of pretending the risk disappears when the client is more limited.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section compare-section" id="compare" aria-labelledby="compare-title">
+            <div class="section-heading centered">
+                <p class="eyebrow">Comparison</p>
+                <h2 id="compare-title">Brutal, but fair.</h2>
+            </div>
+
+            <div class="comparison" role="table" aria-label="Client comparison">
+                <div class="comparison-row header-row" role="row">
+                    <div role="columnheader">Client</div>
+                    <div role="columnheader">Best at</div>
+                    <div role="columnheader">The ceiling</div>
+                </div>
+                <div class="comparison-row" role="row">
+                    <div role="cell"><strong>Vencord</strong></div>
+                    <div role="cell">A clean, stable baseline for normal client modding.</div>
+                    <div role="cell">Limited by design and careful about what users are allowed to touch.</div>
+                </div>
+                <div class="comparison-row" role="row">
+                    <div role="cell"><strong>Equicord</strong></div>
+                    <div role="cell">A broader third-party plugin catalog and community additions.</div>
+                    <div role="cell">More plugins, same closed-vision ceiling when the ideas become uncomfortable.</div>
+                </div>
+                <div class="comparison-row illegal-row" role="row">
+                    <div role="cell"><strong>Illegalcord</strong></div>
+                    <div role="cell">Unlocking the actual potential of modified Discord clients.</div>
+                    <div role="cell">Experimental by nature, transparent about risk, and built for users who want control.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section receipts-section" aria-labelledby="receipts-title">
+            <div class="receipts-panel">
+                <div class="section-heading centered">
+                    <p class="eyebrow">Receipts, not promises</p>
+                    <h2 id="receipts-title">We do not win by asking for trust.</h2>
+                </div>
+                <p class="receipts-lead">
+                    We win by making the code readable, the risks clear, the stability tools visible, and the feature ceiling obvious. If someone says another client is better, ask them what they actually mean: safer-looking, more conservative, or more capable?
+                </p>
+                <div class="receipts-grid">
+                    <article>
+                        <span>01</span>
+                        <h3>Open source</h3>
+                        <p>Read the client code before you install it. Blind trust is not a feature.</p>
+                        <a href="https://github.com/ImHisako/Illegalcord" target="_blank" rel="noreferrer">Inspect source</a>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3>Public docs</h3>
+                        <p>Setup notes, project context, and documentation are published for users who want to verify before joining.</p>
+                        <a href="https://illegalcord.mintlify.site/" target="_blank" rel="noreferrer">Read docs</a>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3>Visible updates</h3>
+                        <p>News, drops, and project direction are shared openly with the community.</p>
+                        <a href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Open Telegram</a>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <h3>Diagnostics-based stability</h3>
+                        <p>Client Diagnostics profiles plugin callback time, heap deltas, slow calls, active timers, animation frames, listeners, and hot surfaces so users can see what is making Discord lag.</p>
+                    </article>
+                    <article>
+                        <span>05</span>
+                        <h3>Feature ceiling</h3>
+                        <p>Microphone control, stereo experiments, high-quality screenshare, diagnostics, and privacy PoCs are the point.</p>
+                    </article>
+                    <article>
+                        <span>06</span>
+                        <h3>User choice</h3>
+                        <p>Use Illegalcord, use Vencord, use Equicord, or use stock Discord. The difference is that Illegalcord does not pretend limits are virtues.</p>
+                    </article>
+                    <article>
+                        <span>07</span>
+                        <h3>No client-name censorship</h3>
+                        <p>We will not censor the names of other modified Discord clients or dismiss them by hiding behind the word "unstable." Illegalcord believes in real freedom of speech and direct comparison.</p>
+                    </article>
+                    <article>
+                        <span>08</span>
+                        <h3>Crash recovery</h3>
+                        <p>CrashHandlerEnhanced records copyable crash reports, writes logs to disk, detects suspected plugins, can recover the crash screen, and can disable a crashing plugin when confidence is high.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section docs-section" id="docs" aria-labelledby="docs-title">
+            <div class="docs-panel">
+                <div>
+                    <p class="eyebrow">Documentation</p>
+                    <h2 id="docs-title">Illegalcord Documentations</h2>
+                    <p>
+                        Read setup notes, plugin context, and project information in the official Illegalcord documentation hub.
+                    </p>
+                </div>
+                <a class="button primary" href="https://illegalcord.mintlify.site/" target="_blank" rel="noreferrer">Open Docs</a>
+            </div>
+        </section>
+
+        <section class="section disclaimer-section" aria-labelledby="disclaimer-title">
+            <div class="section-heading">
+                <p class="eyebrow">Disclaimer</p>
+                <h2 id="disclaimer-title">Provocative name. Not an illegal client.</h2>
+            </div>
+            <div class="disclaimer-copy">
+                <p>
+                    Illegalcord does not endorse illegal activity, abuse, harassment, credential theft, malware, or platform harm. Sensitive features are presented as proof-of-concept, privacy, research, customization, or educational experiments.
+                </p>
+                <p>
+                    Modified clients can break, can be unstable, and can violate Discord's Terms of Service. That risk exists for Vencord, Equicord, Illegalcord, and every other modified Discord client. Use your own judgment, inspect the source, and avoid unofficial builds you cannot verify.
+                </p>
+            </div>
+        </section>
+
+        <section class="section telegram-section" aria-labelledby="telegram-title">
+            <div>
+                <p class="eyebrow">Community</p>
+                <h2 id="telegram-title">Updates, drops, and project news live on Telegram.</h2>
+            </div>
+            <a class="button secondary light" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Join Illegalcord Telegram</a>
+        </section>
+
+        <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+            <div class="section-heading centered">
+                <p class="eyebrow">FAQ</p>
+                <h2 id="faq-title">Questions people ask when a client stops asking for permission.</h2>
+            </div>
+
+            <div class="faq-list">
+                <details open>
+                    <summary>What might the developers of Vencord and Equicord think of this project?</summary>
+                    <p>
+                        They may dislike it. They may call it unstable, risky, too permissive, or tell users to stay away. Some caution is fair: modified clients can break, violate Discord's Terms of Service, and create problems if users install random builds without understanding them. The difference is philosophical. Illegalcord believes users should see the full potential, understand the risk, and choose for themselves. Vencord and Equicord deserve credit for the foundation; Illegalcord rejects the ceiling.
+                    </p>
+                </details>
+                <details>
+                    <summary>Is Illegalcord better than Vencord or Equicord?</summary>
+                    <p>
+                        If you want the safest-looking, most conservative modded client, choose the conservative option. If you want higher-quality streaming experiments, microphone control, stereo audio, stronger privacy PoCs, and a plugin catalog that is not afraid of uncomfortable ideas, Illegalcord is the sharper tool.
+                    </p>
+                </details>
+                <details>
+                    <summary>Isn't Vencord more stable?</summary>
+                    <p>
+                        In practice, Illegalcord is built to be more stable for power users because it gives them tools to understand the client instead of guessing. Updates can rarely have a 1-2 day delay when Discord changes something, but the client is not just "more plugins and hope." Illegalcord includes Client Diagnostics, a plugin that lets users see which plugin or surface is causing lag, slow calls, memory pressure, or active background work. It also includes CrashHandlerEnhanced, a required crash recovery and logging layer that records reports, writes crash logs, detects suspected plugins, and can recover or isolate the problem. Vencord and Equicord may look more conservative; Illegalcord gives you more control over stability.
+                    </p>
+                </details>
+                <details>
+                    <summary>Do you censor the names of other modified Discord clients?</summary>
+                    <p>
+                        No. Illegalcord does not censor the names of modified Discord clients, and we will not pretend Vencord, Equicord, or any other client cannot be named just because someone wants to frame them as unstable or forbidden to discuss. We believe in real freedom of speech: name the clients, compare the features, inspect the source, and let users decide. If another project needs silence to defend its limits, that is not our problem.
+                    </p>
+                </details>
+                <details>
+                    <summary>Why not submit these features to Vencord or Equicord?</summary>
+                    <p>
+                        Because the disagreement is philosophical. Some features do not fit their rules, image, or comfort zone. Illegalcord exists because not every useful idea should be rejected just because it makes a conservative project uncomfortable. Their rules are their rules; Illegalcord is for users who want the ideas those rules leave outside.
+                    </p>
+                </details>
+                <details>
+                    <summary>Is Illegalcord malware?</summary>
+                    <p>
+                        The project is open source. Do not trust random binaries from strangers, do not install builds you cannot verify, and do inspect the source when possible. Calling every ambitious modified client malware is an easy way to scare users back into limited choices; verification is better than fear.
+                    </p>
+                </details>
+                <details>
+                    <summary>Why should I trust Illegalcord instead of Vencord or Equicord?</summary>
+                    <p>
+                        You can trust it, or you can choose not to. The real question is: why did you trust them? Most users install Vencord or Equicord without reading a single line of their source code. Illegalcord does not ask for blind faith. Read the source code, inspect the client, inspect the website, compare it with every other client, and make your own decision. Illegalcord was originally built for myself because I wanted a better Discord experience; then I kept improving it, and people started liking the project. If you do not trust it, do not use it. Use the limited client you prefer. That is not an insult to us. Users are free to choose the modified Discord client they want.
+                    </p>
+                </details>
+                <details>
+                    <summary>Is Illegalcord illegal?</summary>
+                    <p>
+                        No. Illegalcord is not an illegal client, and the name is not an invitation to commit crimes or harm anyone. The "illegal" part is about breaking the pointless limits, unwritten rules, and closed-vision mindset around Vencord and Equicord. They built valuable foundations, but they also keep Discord modding inside a smaller box than it needs to be. Illegalcord exists to push past that box and unlock the real potential of a modified Discord client.
+                    </p>
+                </details>
+                <details>
+                    <summary>Can Discord ban me for using Illegalcord?</summary>
+                    <p>
+                        Yes, any modified Discord client can be against Discord's Terms of Service and can put your account at risk. That is true for Vencord, Equicord, Illegalcord, and other client mods. If you are already accepting that risk, Illegalcord argues you might as well use the client that gives you the strongest experience.
+                    </p>
+                </details>
+                <details>
+                    <summary>Why does Illegalcord include experimental or sensitive plugins?</summary>
+                    <p>
+                        Because technical users learn by testing boundaries. Illegalcord frames sensitive functionality as PoC, research, privacy, customization, and educational work. The project does not endorse abuse. The goal is to understand what modified clients can do and give users control over their own setup.
+                    </p>
+                </details>
+                <details>
+                    <summary>Do you respect Vencord and Equicord?</summary>
+                    <p>
+                        Yes. Illegalcord is possible because their work exists. The thanks are real. The disagreement is also real: a foundation can be respected while its limits are challenged.
+                    </p>
+                </details>
+                <details>
+                    <summary>Is Illegalcord vibe-coded? Did you use AI?</summary>
+                    <p>
+                        Yes, AI has been used for some parts of the work. That does not make Illegalcord skidded, stolen, fake, or low quality. AI-assisted coding is a tool, not a confession. Quality comes from what is reviewed, tested, maintained, and shipped openly. The same people who attack a Discord client for using AI still use apps, operating systems, IDEs, cloud platforms, and services maintained by companies using AI-assisted engineering: Spotify has publicly discussed Honk powered by Claude Code, Microsoft and GitHub push Copilot, Amazon built CodeWhisperer and Amazon Q Developer, Replit built Ghostwriter and AI agents, and Google and Meta have both talked about AI-assisted development. If someone rejects Illegalcord only because AI helped with parts of it, they should be consistent and reject the modern software stack too. Otherwise, it is not a principle; it is selective outrage.
+                    </p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <strong>Illegalcord</strong>
+            <span>Open-source Discord client mod. Use responsibly.</span>
+        </div>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="https://illegalcord.mintlify.site/" target="_blank" rel="noreferrer">Documentations</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
