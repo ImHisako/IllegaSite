@@ -23,7 +23,10 @@
             <a href="index.html#faq">FAQ</a>
             <a href="about.html">About</a>
         </nav>
-        <a class="nav-cta" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
+        <div class="header-actions">
+            <a class="nav-download" href="#download" data-download-trigger>Download</a>
+            <a class="nav-cta" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
+        </div>
     </header>
 
     <main id="top">
@@ -75,6 +78,21 @@
             <p>Illegalcord is released under the GPL-3.0 license.</p>
         </section>
     </main>
+
+    <div class="download-modal" data-download-modal hidden>
+        <div class="download-dialog" role="dialog" aria-modal="true" aria-labelledby="download-title">
+            <button class="download-close" type="button" data-download-close aria-label="Close download dialog">Close</button>
+            <p class="eyebrow">Download</p>
+            <h2 id="download-title">Windows user?</h2>
+            <p>
+                If you are using Windows, download <a class="inline-download" href="https://github.com/ImHisako/IllegalcordInstaller/releases/download/v1.6/Equilotl.exe" target="_blank" rel="noreferrer" data-latest-installer-link>Equilotl.exe</a> from the latest official Illegalcord installer release.
+            </p>
+            <p class="download-status" data-download-status>Checking latest installer...</p>
+            <div class="download-actions">
+                <a class="button secondary" href="https://github.com/ImHisako/IllegalcordInstaller/releases" target="_blank" rel="noreferrer">View all releases</a>
+            </div>
+        </div>
+    </div>
 
     <footer class="site-footer">
         <div>
