@@ -1,4 +1,31 @@
 const header = document.querySelector("[data-header]");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+
+const closeMenu = () => {
+    header?.classList.remove("menu-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    menuToggle?.setAttribute("aria-label", "Open navigation");
+};
+
+menuToggle?.addEventListener("click", () => {
+    const isOpen = header?.classList.toggle("menu-open") ?? false;
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    if (isOpen) header?.querySelector(".nav-links a")?.focus();
+    else menuToggle.focus();
+});
+
+header?.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("pointerdown", event => {
+    if (header?.classList.contains("menu-open") && !header.contains(event.target)) closeMenu();
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 980) closeMenu();
+});
 
 const syncHeader = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 18);
@@ -18,6 +45,7 @@ document.querySelectorAll(".faq-list details").forEach(item => {
 });
 
 const downloadModal = document.querySelector("[data-download-modal]");
+const downloadDialog = downloadModal?.querySelector(".download-dialog");
 const downloadClose = document.querySelector("[data-download-close]");
 const latestInstallerLink = document.querySelector("[data-latest-installer-link]");
 const downloadStatus = document.querySelector("[data-download-status]");
@@ -27,6 +55,7 @@ const fallbackInstaller = {
     tag: "v1.6"
 };
 let latestInstallerPromise;
+let lastModalTrigger;
 
 const setInstaller = installer => {
     if (latestInstallerLink) {
@@ -70,9 +99,12 @@ const loadLatestInstaller = async () => {
     return latestInstallerPromise;
 };
 
-const openDownloadModal = () => {
+const openDownloadModal = trigger => {
     if (!downloadModal) return;
+    lastModalTrigger = trigger;
+    closeMenu();
     downloadModal.hidden = false;
+    document.body.classList.add("modal-open");
     downloadClose?.focus();
 
     if (downloadStatus) downloadStatus.textContent = "Checking latest installer...";
@@ -80,14 +112,16 @@ const openDownloadModal = () => {
 };
 
 const closeDownloadModal = () => {
-    if (!downloadModal) return;
+    if (!downloadModal || downloadModal.hidden) return;
     downloadModal.hidden = true;
+    document.body.classList.remove("modal-open");
+    lastModalTrigger?.focus();
 };
 
 document.querySelectorAll("[data-download-trigger]").forEach(trigger => {
     trigger.addEventListener("click", event => {
         event.preventDefault();
-        openDownloadModal();
+        openDownloadModal(trigger);
     });
 });
 
@@ -98,7 +132,26 @@ downloadModal?.addEventListener("click", event => {
 });
 
 window.addEventListener("keydown", event => {
-    if (event.key === "Escape") closeDownloadModal();
+    if (event.key === "Escape") {
+        if (downloadModal && !downloadModal.hidden) closeDownloadModal();
+        else if (header?.classList.contains("menu-open")) {
+            closeMenu();
+            menuToggle?.focus();
+        }
+    }
+
+    if (event.key !== "Tab" || !downloadModal || downloadModal.hidden || !downloadDialog) return;
+    const focusable = [...downloadDialog.querySelectorAll("a[href], button:not([disabled]), [tabindex]:not([tabindex='-1'])")];
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+    }
 });
 
 const canAnimateCursor =
@@ -107,13 +160,13 @@ const canAnimateCursor =
 
 let lastStarAt = 0;
 let activeStars = 0;
-const starColors = ["#c7ff41", "#55e6ff", "#ffffff", "#ff6aa7"];
+const starColors = ["#c7ff41", "#e9f9bd", "#f4f5ef"];
 
 const createCursorStar = event => {
     if (!canAnimateCursor || event.pointerType === "touch") return;
 
     const now = performance.now();
-    if (now - lastStarAt < 38 || activeStars > 42) return;
+    if (now - lastStarAt < 75 || activeStars > 24) return;
     lastStarAt = now;
     activeStars++;
 

@@ -1,0 +1,4 @@
+# Local agent skills and their generated lockfile
+/.agents/skills/
+/.codex/skills/
+/skills-lock.json

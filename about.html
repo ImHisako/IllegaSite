@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Illegalcord, an open-source Discord client mod owned by Hisako and licensed under the GPL-3.0 license.">
     <title>About Us | Illegalcord</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Illegalcord.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="about-page">
+    <a class="skip-link" href="#top">Skip to content</a>
     <header class="site-header" data-header>
         <a class="brand" href="index.html#top" aria-label="Illegalcord home">
             <img src="Illegalcord.png" alt="Illegalcord logo">
             <span>Illegalcord</span>
         </a>
-        <nav class="nav-links" aria-label="Primary navigation">
+        <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
             <a href="index.html#plugins">Plugins</a>
             <a href="index.html#compare">Compare</a>
             <a href="index.html#docs">Docs</a>
             <a href="index.html#faq">FAQ</a>
-            <a href="about.html">About</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a class="mobile-community" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
         </nav>
         <div class="header-actions">
             <a class="nav-download" href="#download" data-download-trigger>Download</a>
             <a class="nav-cta" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
         </div>
+        <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation" data-menu-toggle>
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main id="top">
@@ -52,7 +55,6 @@
 
         <section class="section about-facts" aria-labelledby="facts-title">
             <div class="section-heading centered">
-                <p class="eyebrow">Project facts</p>
                 <h2 id="facts-title">Simple, open, and clear.</h2>
             </div>
             <div class="about-card-grid">
@@ -87,7 +89,7 @@
             <p>
                 If you are using Windows, download <a class="inline-download" href="https://github.com/ImHisako/IllegalcordInstaller/releases/download/v1.6/Equilotl.exe" target="_blank" rel="noreferrer" data-latest-installer-link>Equilotl.exe</a> from the latest official Illegalcord installer release.
             </p>
-            <p class="download-status" data-download-status>Checking latest installer...</p>
+            <p class="download-status" aria-live="polite" data-download-status>Checking latest installer...</p>
             <div class="download-actions">
                 <a class="button secondary" href="https://github.com/ImHisako/IllegalcordInstaller/releases" target="_blank" rel="noreferrer">View all releases</a>
             </div>

@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Illegalcord is an open-source Discord client mod built for users who want more control, deeper plugins, stronger audio, better streaming, and honest risk awareness.">
-    <title>Illegalcord | Unlock the Modified Discord Experience</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Illegalcord | More control over your Discord client</title>
+    <link rel="icon" type="image/png" href="Illegalcord.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#top">Skip to content</a>
     <header class="site-header" data-header>
         <a class="brand" href="#top" aria-label="Illegalcord home">
             <img src="Illegalcord.png" alt="Illegalcord logo">
             <span>Illegalcord</span>
         </a>
-        <nav class="nav-links" aria-label="Primary navigation">
+        <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
             <a href="#plugins">Plugins</a>
             <a href="#compare">Compare</a>
             <a href="#docs">Docs</a>
             <a href="#faq">FAQ</a>
             <a href="about.html">About</a>
+            <a class="mobile-community" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
         </nav>
         <div class="header-actions">
             <a class="nav-download" href="#download" data-download-trigger>Download</a>
             <a class="nav-cta" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Telegram</a>
         </div>
+        <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation" data-menu-toggle>
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main id="top">
         <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-scene" aria-hidden="true">
-                <div class="signal-grid"></div>
+            <div class="hero-scene">
+                <div class="signal-grid" aria-hidden="true"></div>
                 <figure class="client-shot">
-                    <img src="IllegalcordUI.png" alt="Illegalcord settings interface preview">
+                    <img src="IllegalcordUI.png" alt="Illegalcord settings open in a Discord client" fetchpriority="high">
                 </figure>
                 <img class="hero-mark" src="Illegalcord.png" alt="">
             </div>
@@ -42,13 +45,11 @@
             <div class="hero-content">
                 <p class="eyebrow">Open-source Discord client mod</p>
                 <h1 id="hero-title">Illegalcord</h1>
-                <p class="hero-copy">
-                    Built for people who already know modified Discord clients carry risk and still want the version that pushes the ceiling: stronger plugins, high-quality screen sharing, stereo voice, microphone control, privacy tools, and unapologetic user freedom.
-                </p>
+                <p class="hero-copy">More control over Discord: deeper plugins, sharper streaming, stereo voice, privacy experiments, and tools to understand your client.</p>
                 <div class="hero-actions">
-                    <a class="button primary" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Join Telegram</a>
-                    <a class="button secondary" href="#download" data-download-trigger>Download</a>
-                    <a class="button secondary" href="https://illegalcord.mintlify.site/" target="_blank" rel="noreferrer">Illegalcord Documentations</a>
+                    <a class="button primary" href="#download" data-download-trigger>Download Illegalcord</a>
+                    <a class="button secondary" href="https://illegalcord.mintlify.site/" target="_blank" rel="noreferrer">Read docs</a>
+                    <a class="text-link" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Join Telegram <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
         </section>
@@ -150,7 +151,6 @@
 
         <section class="section feature-band" aria-labelledby="features-title">
             <div class="section-heading">
-                <p class="eyebrow">Illegalcord advantage</p>
                 <h2 id="features-title">The point is not to be safer-looking. The point is to be more capable.</h2>
             </div>
             <div class="feature-list">
@@ -210,7 +210,6 @@
         <section class="section receipts-section" aria-labelledby="receipts-title">
             <div class="receipts-panel">
                 <div class="section-heading centered">
-                    <p class="eyebrow">Receipts, not promises</p>
                     <h2 id="receipts-title">We do not win by asking for trust.</h2>
                 </div>
                 <p class="receipts-lead">
@@ -267,7 +266,6 @@
         <section class="section docs-section" id="docs" aria-labelledby="docs-title">
             <div class="docs-panel">
                 <div>
-                    <p class="eyebrow">Documentation</p>
                     <h2 id="docs-title">Illegalcord Documentations</h2>
                     <p>
                         Read setup notes, plugin context, and project information in the official Illegalcord documentation hub.
@@ -279,7 +277,6 @@
 
         <section class="section disclaimer-section" aria-labelledby="disclaimer-title">
             <div class="section-heading">
-                <p class="eyebrow">Disclaimer</p>
                 <h2 id="disclaimer-title">Provocative name. Not an illegal client.</h2>
             </div>
             <div class="disclaimer-copy">
@@ -294,7 +291,6 @@
 
         <section class="section telegram-section" aria-labelledby="telegram-title">
             <div>
-                <p class="eyebrow">Community</p>
                 <h2 id="telegram-title">Updates, drops, and project news live on Telegram.</h2>
             </div>
             <a class="button secondary light" href="https://t.me/Illegalcord" target="_blank" rel="noreferrer">Join Illegalcord Telegram</a>
@@ -302,7 +298,6 @@
 
         <section class="section faq-section" id="faq" aria-labelledby="faq-title">
             <div class="section-heading centered">
-                <p class="eyebrow">FAQ</p>
                 <h2 id="faq-title">Questions people ask when a client stops asking for permission.</h2>
             </div>
 
@@ -391,7 +386,7 @@
             <p>
                 If you are using Windows, download <a class="inline-download" href="https://github.com/ImHisako/IllegalcordInstaller/releases/download/v1.6/Equilotl.exe" target="_blank" rel="noreferrer" data-latest-installer-link>Equilotl.exe</a> from the latest official Illegalcord installer release.
             </p>
-            <p class="download-status" data-download-status>Checking latest installer...</p>
+            <p class="download-status" aria-live="polite" data-download-status>Checking latest installer...</p>
             <div class="download-actions">
                 <a class="button secondary" href="https://github.com/ImHisako/IllegalcordInstaller/releases" target="_blank" rel="noreferrer">View all releases</a>
             </div>
